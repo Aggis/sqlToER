@@ -1,0 +1,7 @@
+node_modules
+.env
+/sqlToER.drawio
+/sqlToEr.png
+/*.bkp
+/sqlToEr.html
+/sqlToEr.svg

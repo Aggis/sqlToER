@@ -1,0 +1,88 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36" version="28.0.6">
+  <diagram name="ER Diagram" id="SchemaERD">
+    <mxGraphModel dx="1426" dy="849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2500" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tblAspNetRoles" value="&lt;b&gt;AspNetRoles&lt;/b&gt;&lt;hr&gt;&lt;u&gt;Id&lt;/u&gt;: nvarchar(450) (PK)&lt;br&gt;Name: nvarchar(256) (nullable)&lt;br&gt;NormalizedName: nvarchar(256) (nullable)&lt;br&gt;ConcurrencyStamp: nvarchar(max) (nullable)" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
+          <mxGeometry x="180" y="50" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tblAspNetRoleClaims" value="&lt;b&gt;AspNetRoleClaims&lt;/b&gt;&lt;hr&gt;&lt;u&gt;Id&lt;/u&gt;: int (PK, IDENTITY)&lt;br&gt;RoleId: nvarchar(450) (FK)&lt;br&gt;ClaimType: nvarchar(max) (nullable)&lt;br&gt;ClaimValue: nvarchar(max) (nullable)" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
+          <mxGeometry x="180" y="210" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tblAspNetUsers" value="&lt;b&gt;AspNetUsers&lt;/b&gt;&lt;hr&gt;&lt;u&gt;Id&lt;/u&gt;: nvarchar(450) (PK)&lt;br&gt;UserName: nvarchar(256) (nullable)&lt;br&gt;NormalizedUserName: nvarchar(256) (nullable)&lt;br&gt;Email: nvarchar(256) (nullable)&lt;br&gt;NormalizedEmail: nvarchar(256) (nullable)&lt;br&gt;EmailConfirmed: bit&lt;br&gt;PasswordHash: nvarchar(max) (nullable)&lt;br&gt;SecurityStamp: nvarchar(max) (nullable)&lt;br&gt;ConcurrencyStamp: nvarchar(max) (nullable)&lt;br&gt;PhoneNumber: nvarchar(max) (nullable)&lt;br&gt;PhoneNumberConfirmed: bit&lt;br&gt;TwoFactorEnabled: bit&lt;br&gt;LockoutEnd: datetimeoffset(7) (nullable)&lt;br&gt;LockoutEnabled: bit&lt;br&gt;AccessFailedCount: int" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
+          <mxGeometry x="485" y="420" width="300" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="tblAspNetUserClaims" value="&lt;b&gt;AspNetUserClaims&lt;/b&gt;&lt;hr&gt;&lt;u&gt;Id&lt;/u&gt;: int (PK, IDENTITY)&lt;br&gt;UserId: nvarchar(450) (FK)&lt;br&gt;ClaimType: nvarchar(max) (nullable)&lt;br&gt;ClaimValue: nvarchar(max) (nullable)" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
+          <mxGeometry x="180" y="540" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tblAspNetUserLogins" value="&lt;b&gt;AspNetUserLogins&lt;/b&gt;&lt;hr&gt;&lt;u&gt;LoginProvider&lt;/u&gt;: nvarchar(450) (PK)&lt;br&gt;&lt;u&gt;ProviderKey&lt;/u&gt;: nvarchar(450) (PK)&lt;br&gt;ProviderDisplayName: nvarchar(max) (nullable)&lt;br&gt;UserId: nvarchar(450) (FK)" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
+          <mxGeometry x="820" y="50" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tblAspNetUserTokens" value="&lt;b&gt;AspNetUserTokens&lt;/b&gt;&lt;hr&gt;&lt;u&gt;UserId&lt;/u&gt;: nvarchar(450) (PK, FK)&lt;br&gt;&lt;u&gt;LoginProvider&lt;/u&gt;: nvarchar(450) (PK)&lt;br&gt;&lt;u&gt;Name&lt;/u&gt;: nvarchar(450) (PK)&lt;br&gt;Value: nvarchar(max) (nullable)" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
+          <mxGeometry x="870" y="540" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tblUttag" value="&lt;b&gt;Uttag&lt;/b&gt;&lt;hr&gt;&lt;u&gt;Id&lt;/u&gt;: int (PK, IDENTITY)&lt;br&gt;Name: nvarchar(max)&lt;br&gt;Date: datetime2(7)&lt;br&gt;Description: nvarchar(max) (nullable)&lt;br&gt;IsActive: bit" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="60" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tblUttagData" value="&lt;b&gt;UttagData&lt;/b&gt;&lt;hr&gt;&lt;u&gt;Id&lt;/u&gt;: int (PK, IDENTITY)&lt;br&gt;Uttag_Id: int (FK)&lt;br&gt;Name: nvarchar(max)&lt;br&gt;Description: nvarchar(max)&lt;br&gt;SqlCode: nvarchar(max)&lt;br&gt;CreatedAt: datetime2(7)&lt;br&gt;ChangedAt: datetime2(7)&lt;br&gt;ServerSource: nvarchar(max)" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="310" width="250" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="relAspNetRoleClaims" value="" style="endArrow=ERoneToMany;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;verticalAlign=top;labelBackgroundColor=none;strokeColor=#000000;" parent="1" source="tblAspNetRoles" target="tblAspNetRoleClaims" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="475" y="170" as="sourcePoint" />
+            <mxPoint x="475" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relAspNetUserClaims" value="" style="endArrow=ERoneToMany;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;verticalAlign=top;labelBackgroundColor=none;strokeColor=#000000;" parent="1" source="tblAspNetUsers" target="tblAspNetUserClaims" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="775" y="410" as="sourcePoint" />
+            <mxPoint x="775" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relAspNetUserLogins" value="" style="endArrow=ERoneToMany;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;verticalAlign=top;labelBackgroundColor=none;strokeColor=#000000;" parent="1" source="tblAspNetUserRoles" target="tblAspNetUserLogins" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="950" y="100" as="sourcePoint" />
+            <mxPoint x="980" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relAspNetUserRoles_Roles" value="" style="endArrow=ERoneToMany;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;verticalAlign=top;labelBackgroundColor=none;strokeColor=#000000;" parent="1" source="tblAspNetRoles" target="tblAspNetUserRoles" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="600" y="110" as="sourcePoint" />
+            <mxPoint x="980" y="240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relAspNetUserRoles_Users" value="" style="endArrow=ERoneToMany;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;verticalAlign=top;labelBackgroundColor=none;strokeColor=#000000;" parent="1" source="tblAspNetUsers" target="tblAspNetUserRoles" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="950" y="230" as="sourcePoint" />
+            <mxPoint x="980" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relAspNetUserTokens" value="" style="endArrow=ERoneToMany;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;verticalAlign=top;labelBackgroundColor=none;strokeColor=#000000;" parent="1" source="tblAspNetUsers" target="tblAspNetUserTokens" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="950" y="350" as="sourcePoint" />
+            <mxPoint x="980" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relUttagData" value="" style="endArrow=ERoneToMany;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;verticalAlign=top;labelBackgroundColor=none;strokeColor=#000000;" parent="1" source="tblUttag" target="tblUttagData" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="2005" y="190" as="sourcePoint" />
+            <mxPoint x="2005" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hMut__Wosq90QFj84tTL-1" value="" style="endArrow=ERoneToMany;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;verticalAlign=top;labelBackgroundColor=none;strokeColor=#000000;" edge="1" parent="1" source="tblAspNetUsers" target="tblAspNetUserRoles">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="672" y="450" as="sourcePoint" />
+            <mxPoint x="691" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tblAspNetUserRoles" value="&lt;b&gt;AspNetUserRoles&lt;/b&gt;&lt;hr&gt;&lt;u&gt;UserId&lt;/u&gt;: nvarchar(450) (PK, FK)&lt;br&gt;&lt;u&gt;RoleId&lt;/u&gt;: nvarchar(450) (PK, FK)" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
+          <mxGeometry x="510" y="70" width="250" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
