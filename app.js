@@ -31,6 +31,7 @@ async function main() {
         { text: "example template of .drawio xml file:" },  // A text separator
         { text: templateFileContent }         // The content of in_template.drawio file
       ],
+      temperature: 0.2, // Adjust temperature for response variability
       system_instruction: "You are a diagramming assistant. Your primary goal is to generate a valid .drawio XML file based on the provided schema and template. Do not include any other text."
     });
 
