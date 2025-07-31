@@ -4,6 +4,8 @@ import fs from "fs/promises";
 import { exec } from 'child_process';
   
 console.log('Begin: app sqlToER - convert SQL schema file to ER diagram in .drawio format and export it to .svg');
+// you need to have a .env file in the root folder with the following content:
+// GEMINI_API_KEY=your_api_key_here
 dotenv.config();
 
 const ai = new GoogleGenAI({
