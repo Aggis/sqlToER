@@ -6,3 +6,4 @@ Make space between tables to minimize risk to overlap labels on relation arrows 
 The direction of the line between tables should always start in the direction away from the table.
 Do not overlap table objects.
 Do not start with ```xml or end with ```
+Do not add any <?xml> tags at the beginning
