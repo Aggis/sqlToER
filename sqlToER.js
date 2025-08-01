@@ -16,7 +16,8 @@ async function main() {
   try {
     // Read the in files
     const promptFileContent  = await fs.readFile("in_sqlToER_prompt.txt", "utf-8");
-    const sqlFileContent = await fs.readFile("in_db.sql", "utf-8");
+    const inputFilePath = process.argv[2] || "in_sample_db_schema.sql";
+    const sqlFileContent = await fs.readFile(inputFilePath, "utf-8");
     const templateFileContent = await fs.readFile("in_template.drawio", "utf-8");
    
     console.log('Make call to gemini-2.5-flash model');

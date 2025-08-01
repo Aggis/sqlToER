@@ -7,8 +7,8 @@
     "dotenv": "^17.2.1"
   },
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node sqlToER.js",
+    "dev": "nodemon sqlToER.js"
   }
   
 }

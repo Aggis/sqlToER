@@ -7,4 +7,4 @@ Export done by draw.io.exe.
 
 Javascript console app.
 
-Run: node app.js
+Run: node sqlToER.js "<path to sql db schmema file>"
